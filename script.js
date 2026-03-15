@@ -71,6 +71,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener("scroll", reveal);
     reveal(); 
+
+    // 4. Project filters
+    const filterButtons = document.querySelectorAll('.project-filter');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
 });
 
 const text = "Hello and Welcome 👋";
