@@ -9,4 +9,4 @@ Features:
 - Contact form
 
 Live Site:
-https://portfolio-seven-xi-looi6dtocn.vercel.app
+https://portfolio-seven-xi-l0oi6dtocn.vercel.app/ 
